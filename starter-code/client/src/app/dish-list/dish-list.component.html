@@ -1,0 +1,10 @@
+<a [routerLink] = "['dish', 42]"> View Details </a>
+<h1> Dish List </h1>
+	<div>
+		<div *ngFor="let dish of dishes">
+			<img [src]="dish.image" />
+			<h3> {{ dish.name }} </h3>
+			<p> {{ dish.description }} </p>
+			<a [routerLink]="['dish', dish._id]"> View Details </a>
+		</div>
+	</div>
